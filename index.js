@@ -1,7 +1,4 @@
 const { Client, LegacySessionAuth } = require('whatsapp-web.js');
-require("dotenv").config();
-const { MongoStore } = require('wwebjs-mongo');
-const mongoose = require('mongoose');
 const fs = require("fs");
 const qrcode = require('qrcode-terminal');
 
