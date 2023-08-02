@@ -1,57 +1,6 @@
-2023/08/02-13:06:23.245 f60 Creating DB C:\Users\ADMIN\Desktop\programs\whatsapp-js-fork\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
-2023/08/02-13:06:23.337 f60 Reusing MANIFEST C:\Users\ADMIN\Desktop\programs\whatsapp-js-fork\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/08/02-13:06:23.652 2678 Level-0 table #5: started
-2023/08/02-13:06:23.734 2678 Level-0 table #5: 7374 bytes OK
-2023/08/02-13:06:23.800 2678 Delete type=0 #3
-2023/08/02-13:06:23.802 2298 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
-2023/08/02-13:06:27.150 2678 Level-0 table #7: started
-2023/08/02-13:06:27.288 2678 Level-0 table #7: 20434 bytes OK
-2023/08/02-13:06:27.397 2678 Delete type=0 #4
-2023/08/02-13:06:27.398 2678 Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)
-2023/08/02-13:07:23.798 146c Level-0 table #9: started
-2023/08/02-13:07:24.096 146c Level-0 table #9: 1263195 bytes OK
-2023/08/02-13:07:24.172 146c Delete type=0 #6
-2023/08/02-13:07:24.246 146c Compacting 1@0 + 1@1 files
-2023/08/02-13:07:24.741 146c Generated table #10@0: 28934 keys, 971794 bytes
-2023/08/02-13:07:24.741 146c Compacted 1@0 + 1@1 files => 971794 bytes
-2023/08/02-13:07:24.794 146c compacted to: files[ 0 1 1 0 0 0 0 ]
-2023/08/02-13:07:30.300 16c Level-0 table #12: started
-2023/08/02-13:07:30.560 16c Level-0 table #12: 1296225 bytes OK
-2023/08/02-13:07:30.622 16c Delete type=2 #7
-2023/08/02-13:07:30.622 16c Delete type=0 #8
-2023/08/02-13:07:30.623 16c Delete type=2 #9
-2023/08/02-13:07:31.557 16c Compacting 1@0 + 1@1 files
-2023/08/02-13:07:31.995 16c Generated table #13@0: 53402 keys, 1811600 bytes
-2023/08/02-13:07:31.995 16c Compacted 1@0 + 1@1 files => 1811600 bytes
-2023/08/02-13:07:32.018 16c compacted to: files[ 0 1 1 0 0 0 0 ]
-2023/08/02-13:07:32.018 16c Delete type=2 #10
-2023/08/02-13:07:32.018 16c Delete type=2 #12
-2023/08/02-13:07:46.965 464 Level-0 table #15: started
-2023/08/02-13:07:47.286 464 Level-0 table #15: 1252200 bytes OK
-2023/08/02-13:07:47.311 464 Delete type=0 #11
-2023/08/02-13:07:47.450 464 Compacting 1@0 + 1@1 files
-2023/08/02-13:07:48.540 464 Generated table #16@0: 76259 keys, 2254031 bytes
-2023/08/02-13:07:48.940 464 Generated table #17@0: 11469 keys, 306777 bytes
-2023/08/02-13:07:48.940 464 Compacted 1@0 + 1@1 files => 2560808 bytes
-2023/08/02-13:07:49.071 464 compacted to: files[ 0 2 1 0 0 0 0 ]
-2023/08/02-13:07:58.250 11e8 Level-0 table #19: started
-2023/08/02-13:07:58.602 11e8 Level-0 table #19: 1180459 bytes OK
-2023/08/02-13:07:58.628 11e8 Delete type=2 #13
-2023/08/02-13:07:58.628 11e8 Delete type=0 #14
-2023/08/02-13:07:58.628 11e8 Delete type=2 #15
-2023/08/02-13:07:58.919 22e4 Compacting 1@0 + 2@1 files
-2023/08/02-13:07:59.639 22e4 Generated table #20@0: 89780 keys, 2262393 bytes
-2023/08/02-13:07:59.864 22e4 Generated table #21@0: 28949 keys, 1039216 bytes
-2023/08/02-13:07:59.864 22e4 Compacted 1@0 + 2@1 files => 3301609 bytes
-2023/08/02-13:07:59.910 22e4 compacted to: files[ 0 2 1 0 0 0 0 ]
-2023/08/02-13:07:59.910 22e4 Delete type=2 #16
-2023/08/02-13:07:59.910 22e4 Delete type=2 #17
-2023/08/02-13:07:59.910 22e4 Delete type=2 #19
-2023/08/02-13:07:59.915 22e4 Level-0 table #23: started
-2023/08/02-13:08:00.156 22e4 Level-0 table #23: 1029123 bytes OK
-2023/08/02-13:08:00.206 22e4 Delete type=0 #18
-2023/08/02-13:08:00.232 f60 Compacting 1@0 + 2@1 files
-2023/08/02-13:08:01.049 f60 Generated table #24@0: 100165 keys, 2274308 bytes
-2023/08/02-13:08:01.621 f60 Generated table #25@0: 42904 keys, 1994185 bytes
-2023/08/02-13:08:01.621 f60 Compacted 1@0 + 2@1 files => 4268493 bytes
-2023/08/02-13:08:01.846 f60 compacted to: files[ 0 2 1 0 0 0 0 ]
+2023/08/02-13:17:53.203 1fb8 Reusing MANIFEST C:\Users\ADMIN\Desktop\programs\whatsapp-js-fork\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/08/02-13:17:53.204 1fb8 Recovering log #22
+2023/08/02-13:17:53.689 1fb8 Reusing old log C:\Users\ADMIN\Desktop\programs\whatsapp-js-fork\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000022.log 
+2023/08/02-13:17:53.689 1fb8 Delete type=2 #20
+2023/08/02-13:17:53.689 1fb8 Delete type=2 #21
+2023/08/02-13:17:53.689 1fb8 Delete type=2 #23

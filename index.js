@@ -15,56 +15,73 @@ app.get('/', (req, res)=>{
   res.send('testing server connection')
 });
 
-  const client = new Client({
-    authStrategy: new LocalAuth(),
-      puppeteer: {
-        args: [
-        "--disable-setuid-sandbox",
-        "--no-sandbox",
-        "--single-process",
-        "--no-zygote",
-        ],
-      }
+ async function whatsapp () {
+    try {
+        const client = new Client({
+            authStrategy: new LocalAuth(),
+              puppeteer: {
+                args: [
+                "--disable-setuid-sandbox",
+                "--no-sandbox",
+                "--single-process",
+                "--no-zygote",
+                ],
+              }
+        
+          });
+        
+          client.on('qr', qr => {
+            qrcode.generate(qr, {small: true});
+        });
+        
+        
+        client.on("authenticated", (session) => {
+            console.log("WHATSAPP WEB => Authenticated");
+          });
+        
+          client.on('ready', () => {
+            console.log('Client is ready!');
+            const text1 = "DM for your cvs, sops, personal statements, study-gap letters, motivation-letters, recommendation-letters, LinkedIn optimization and scholarship essays";
+            const text2 = "DM for your assignments and research proposals"
+            const text3 = "DM if you intend to know why you don't get any response after you apply for a remote tech job."
+            const BretId = '2348130135975@c.us';
+            const scholarshipGroupId = '120363045867794165@g.us';
+            const usaPhdMastersGroup = '120363045640077939@g.us';
+            const hndGraduatesGroup = '120363044283854718@g.us';
+            const finlandGroup = '120363042210032667@g.us';
+            const schForDevsGroup = '120363046922877419@g.us'
+            const enu2023Group = '120363045906255937@g.us'
+            setInterval(() => {
+                const today = new Date();
+                if (today.getDay() === 1 && today.getHours() === 9) {
+                    client.sendMessage(usaPhdMastersGroup, text1);
+                  } else if (today.getDay() === 4 && today.getHours() === 20) {
+                    client.sendMessage(hndGraduatesGroup, text1);
+                    client.sendMessage(finlandGroup, text1);
+                    client.sendMessage(schForDevsGroup, text3)
+                  } else if (today.getDay() === 5 && today.getHours() === 20){
+                    client.sendMessage(enu2023Group, text2)
+                  }
+                  else {console.log('not the given date')}
+            }, 30*60*1000);
+        });
+        
+        client.on("auth_failure", (session) => {
+            console.log("WHATSAPP WEB => Auth Failure");
+          });
+          
+          client.on("disconnected", (reason) => {
+            console.log("WHATSAPP WEB => Disconnected");
+          });
+          
+        client.initialize();
+        
+    } catch (error) {
+        console.log(error)
+    }
+ };
 
-  });
-
-  client.on('qr', qr => {
-    qrcode.generate(qr, {small: true});
-});
-
-
-client.on("authenticated", (session) => {
-    console.log("WHATSAPP WEB => Authenticated");
-  });
-
-  client.on('ready', () => {
-    console.log('Client is ready!');
-    const text1 = "DM for your cvs, sops, personal statements, study-gap letters, motivation-letters, recommendation-letters, and scholarship essays";
-    const text2 = "DM for your assignments and research proposals"
-    const chatId = '2348130135975@c.us';
-    const groupId = '120363045867794165@g.us';
-    setInterval(() => {
-        setTimeout(() => {
-            client.sendMessage(chatId, text2);
-            console.log('second text sent') 
-        }, 30000);
-        client.sendMessage(chatId, text1);
-        console.log('first text sent') 
-    }, 60000);
-});
-
-client.on("auth_failure", (session) => {
-    console.log("WHATSAPP WEB => Auth Failure");
-  });
-  
-  client.on("disconnected", (reason) => {
-    console.log("WHATSAPP WEB => Disconnected");
-  });
-  
-
-
-client.initialize();
-
+ whatsapp()
 
 
 

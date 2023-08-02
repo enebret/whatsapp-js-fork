@@ -1,2 +1,3 @@
-2023/08/02-13:06:20.704 f60 Creating DB C:\Users\ADMIN\Desktop\programs\whatsapp-js-fork\.wwebjs_auth\session\Default\Session Storage since it was missing.
-2023/08/02-13:06:20.867 f60 Reusing MANIFEST C:\Users\ADMIN\Desktop\programs\whatsapp-js-fork\.wwebjs_auth\session\Default\Session Storage/MANIFEST-000001
+2023/08/02-13:17:52.521 1fb8 Reusing MANIFEST C:\Users\ADMIN\Desktop\programs\whatsapp-js-fork\.wwebjs_auth\session\Default\Session Storage/MANIFEST-000001
+2023/08/02-13:17:52.521 1fb8 Recovering log #3
+2023/08/02-13:17:52.522 1fb8 Reusing old log C:\Users\ADMIN\Desktop\programs\whatsapp-js-fork\.wwebjs_auth\session\Default\Session Storage/000003.log 
