@@ -15,9 +15,7 @@ app.get('/', (req, res)=>{
   res.send('testing server connection')
 });
 
- async function whatsapp () {
-    try {
-        const client = new Client({
+    const client = new Client({
             authStrategy: new LocalAuth(),
               puppeteer: {
                 args: [
@@ -54,13 +52,25 @@ app.get('/', (req, res)=>{
             setInterval(() => {
                 const today = new Date();
                 if (today.getDay() === 1 && today.getHours() === 9) {
-                    client.sendMessage(usaPhdMastersGroup, text1);
+                    try {
+                        client.sendMessage(usaPhdMastersGroup, text1);
+                    } catch (error) {
+                        console.log(error)
+                    }
                   } else if (today.getDay() === 4 && today.getHours() === 20) {
+                   try {
                     client.sendMessage(hndGraduatesGroup, text1);
                     client.sendMessage(finlandGroup, text1);
                     client.sendMessage(schForDevsGroup, text3)
+                   } catch (error) {
+                        console.log(error)
+                   }
                   } else if (today.getDay() === 5 && today.getHours() === 20){
-                    client.sendMessage(enu2023Group, text2)
+                    try {
+                        client.sendMessage(enu2023Group, text2)
+                    } catch (error) {
+                        console.log(error)
+                    }
                   }
                   else {console.log('not the given date')}
             }, 30*60*1000);
@@ -76,12 +86,6 @@ app.get('/', (req, res)=>{
           
         client.initialize();
         
-    } catch (error) {
-        console.log(error)
-    }
- };
-
- whatsapp()
 
 
 
