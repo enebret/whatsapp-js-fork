@@ -1,7 +1,6 @@
-const { Client, LegacySessionAuth } = require('whatsapp-web.js');
+const { Client, LocalAuth } = require('whatsapp-web.js');
 const fs = require("fs");
 const qrcode = require('qrcode-terminal');
-
 const express = require ('express');
 const app = express();
 const port = process.env.PORT || 5727 ;
@@ -17,9 +16,7 @@ app.get('/', (req, res)=>{
 });
 
   const client = new Client({
-    authStrategy: new LegacySessionAuth({
-        session: {} // saved session object
-    }),
+    authStrategy: new LocalAuth(),
       puppeteer: {
         args: [
         "--disable-setuid-sandbox",
@@ -48,10 +45,12 @@ client.on("authenticated", (session) => {
     const groupId = '120363045867794165@g.us';
     setInterval(() => {
         setTimeout(() => {
-            client.sendMessage(chatId, text2) 
-        }, 2000);
+            client.sendMessage(chatId, text2);
+            console.log('second text sent') 
+        }, 30000);
         client.sendMessage(chatId, text1);
-    }, 10000);
+        console.log('first text sent') 
+    }, 60000);
 });
 
 client.on("auth_failure", (session) => {
